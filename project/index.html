@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Capital Bikeshare - Data Visualization</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <!-- This is for the navicon return // <a class="navbar-brand" href="#page-top"><img src="assets/img/navbarlogo.png" alt="..." /></a>-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#intro">Introduzione</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#timeline">Storia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#numeri">Numeri</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#heatmap">Evoluzione</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#stations">Stazioni</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#users">Utenti</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-heading text-uppercase">The Bike Era</div>
+                <div class="masthead-subheading">Storia del successo del bike-sharing a Washiington D.C</div>
+                <!-- For the MastHead Button <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a> -->
+            </div>
+        </header>
+        <!-- Introduction-->
+        <section class="page-section bg-light" id="intro">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Introduzione</h2>
+                    <h3 class="section-subheading text-muted">Una intro sul servizio di bike sharing.</h3>
+                </div>
+                  <!-- Intro part -->
+                  <div class="row">
+                    <div class="col-6 col-md-4">Il bike sharing è uno degli strumenti di mobilità sostenibile più diffusi e popolari. Esso è un servizio di noleggio di biciclette attraverso il quale gli utenti sono in grado di noleggiare facilmente una bicicletta da una posizione particolare e restituirla in un’altra posizione della città. Il sistema di utilizzo delle biciclette a noleggio è semplice proprio come pedalare e non è caratterizzato da burocrazie di nessun genere. Le stazioni vengono installate in svariati punti della città e i metodi di pagamento non rallentano e non complicano l’accesso all’utilizzo del servizio, sia attraverso tessere contactless che attraverso gli smartphone muniti dell’apposita app.</div>
+                    <div class="col-6 col-md-4">La bicicletta appare una soluzione smart ed economica per muoversi liberamente in città e spesso risulta molto utile per i viaggi laddove il mezzo pubblico non arriva o non può arrivare. Inoltre, contrariamente ad altri servizi di trasporto come autobus o metropolitana, nei sistemi di bike sharing viene esplicitamente registrata la durata del viaggio, la posizione di partenza e di arrivo. Questa funzione trasforma il sistema di bike sharing in una rete di sensori virtuali che può essere utilizzata per rilevare la mobilità in città.</div>
+                    <div class="col-6 col-md-4">In questo report ci occuperemo di analizzare il bike sharing nella città di Washington D.C. Per farlo andremo sfruttaremo i dati forniti da Capital Bikeshare (i.e la compagnia che detiene il monopolio sulla promozione e diffusione del bikesharing), mostreremo come in poco meno di una decade il bike sharing si sia evoluto da servizio riservato esclusivamente ai quartieri della business area della città, a fenomeno endemico di tutta l’area metropolitana di Washington.</div>
+                  </div>
+            </div>
+        </section>
+        <!-- Timeline-->
+        <section class="page-section" id="timeline">
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="section-heading text-uppercase">Storia del bike sharing a Washington</h2>
+                            <h3 class="section-subheading text-muted">Ripercorriamo brevemente le tappe più importanti della diffusione del servizio</h3>
+                        </div>
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>Agosto 2008</h4>
+                                        <h4 class="subheading">Debutta SmartBike D.C</h4>
+                                    </div>
+                                    <div class="timeline-body"><p class="text-muted">Prima iniziativa di bike-sharing per la città di Washignton D.C. Il servizio parte con 120 bici sparse in 10 stazioni nella sola business area della città.</p></div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/cabilogo.jpeg" alt="..." /></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>Settembre 2010</h4>
+                                        <h4 class="subheading">Nasce Capital BikeShare</h4>
+                                    </div>
+                                    <div class="timeline-body"><p class="text-muted">A seguito dello scarso rendimento, nasce una nuova società con all'interno investitori privati, la quale cambia nome e amplia il suo piano di mobilità. Il servizio CaBi viene ora lanciato con 400 bici in 49 stazioni.</p></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/expansion.jpeg" alt="..." /></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>Settembre 2011</h4>
+                                        <h4 class="subheading">L'inizio dell'espansione</h4>
+                                    </div>
+                                    <div class="timeline-body"><p class="text-muted">Viene approvato il piano di espansione per comprire l'intero distretto di Columbia entro 5 anni</p></div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/comunity.jpg" alt="..." /></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>Settembre 2012</h4>
+                                        <h4 class="subheading">La conquista di una community</h4>
+                                    </div>
+                                    <div class="timeline-body"><p class="text-muted">Il servizio spopola tra gli abitanti di Washignton arrivando ad avere 2800 biciclette dislocate in 288 stazioni.
+                                    </p></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/exp2res.jpg" alt="..." /></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>Agosto 2015</h4>
+                                        <h4 class="subheading">Seconda espansione</h4>
+                                    </div>
+                                    <div class="timeline-body"><p class="text-muted">Dopo l'acquisizione di nuove infrastrutture, Capital Bikeshare annuncia una nuova espansione per includere maggiormente le città periferiche nei distretti di Arlington, Alexandria e Montgomery.</p></div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/app.jpeg" alt="..." /></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>Giugno 2016</h4>
+                                        <h4 class="subheading">Capital Bikeshare approda sugli app store</h4>
+                                    </div>
+                                    <div class="timeline-body"><p class="text-muted">Viene annunciata lo sviluppo di applicazione per dispositivi mobili. L'app permette di verificare le biciclette disponibili nell'area e aggiunge nuovi piani tariffari per gli utenti casuali.
+                                    </p></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/lyft.png" alt="..." /></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>Ottobre 2018</h4>
+                                        <h4 class="subheading">Acquisizione da parte di Lyft</h4>
+                                    </div>
+                                    <div class="timeline-body"><p class="text-muted">CaBi entra a far parte del gruppo Lyft, che annuncia una piano di investimenti per affiancare al parco bici un nuovo servizio di <b>monopattini elettrici.</b></p></div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image">
+                                    <h4>
+                                        
+                                        <br />
+                                        Presente
+                                        <br />
+                                        
+                                    </h4>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+        </section>
+        <!--Numeri -->
+        <section class="page-section bg-light" id="numeri">
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="section-heading text-uppercase">Capital Bikeshare in numeri</h2>
+                            <h3 class="section-subheading text-muted">Diffusione e utilizzo del bikesharing durante i primi anni.</h3>
+                        </div>
+                        <!--First visualization -->
+                        <div class="row">
+                            <div class="col-8"><img width="100%" src="assets/img/about/infograficaFinale.jpg"></div>
+                            <div class="col-4">La società durante il periodo preso in esame ha applicato solo due tipologie di tariffe: utenti membri e utenti casuali. 
+
+                                Dal grafico si evince che entrambe le categorie hanno mantenuto un andamento di crescita costante fino al 2016.
+                                
+                                Questi risultati sono frutto di una campagna di investimenti molto efficace portata avanti da scelte aziendale corrette (e.g. aumentare il numero di stazioni).
+                                
+                                L’applicazione mobile, dal 2016 in poi, ha fatto si’ che l’accesso al servizio sia divenuto ancora più agevole, in questo modo gli utenti casuali hanno superato gli utenti membri. 
+                                
+                                L’arrivo di competitors, nel 2017, ha causato un recesso di utenti casuali mentre ha fidelizzato maggiormente gli utenti membri.
+                                
+                                Le cause di tale recesso sono da imputare principalmente a tre fattori: i sistemi dockless dei competitors, la presenza di monopattini elettrici, i quali risultano più appetibili a utenti sporadici, e una campagna aggressiva di politica sui prezzi.</div>
+                          </div>
+                    </div>
+        </section>
+        <!-- HeatMap-->
+        <section class="page-section" id="heatmap">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Evoluzione del servizio</h2>
+                    <h3 class="section-subheading text-muted">Diffusione e utilizzo del bikesharing durante i primi anni.</h3>
+                </div>
+                <!--First visualization -->
+                <div class="row">
+                    <div class="col-4">La diffusione del bike sharing è stata lenta ma costante durante tutto il periodo.
+
+                        Tramite la mappa si può evincere come il percorso sia stato graduale, con colori sempre più tendenti al rosso, che denotano come l’utilizzo del servizio sia andato ad aumentare nel tempo.
+                        La cosa interessante è che l’andamento progressivo non è cosi stagionale come si potrebbe pensare, non vi è una significativa variazione tra i mesi invernali e quelli estivi.
+                        
+                        Questo fenomeno è da attribuirsi alla composizione degli utenti, infatti il bikesharing è sbilanciato in maniera preponderante verso utenti di tipo membro, poiché questi ultimo utilizzano il servizio da pendolari, e quindi il motivo di tale costanza è da attribuirsi più a ragioni lavorative che al servizio stesso.
+                        
+                        In ultima istanza, notiamo come il servizio sia diventato fenomeno endemico della città e che grazie agli accordi presi con i comuni limitrofi sia arrivato anche in zone periferiche.
+                    </div>
+                    <div class="col-8"><div class='tableauPlaceholder' id='viz1643479508151' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='mappa_calore003&#47;Foglio4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='it-IT' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1643479508151');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
+                </div>
+            </div>
+        </section>
+        <!-- Stazioni-->
+        <section class="page-section bg-light" id="stations">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Bike city sightseeing</h2>
+                    <h3 class="section-subheading text-muted">Una panoramica sulle stazioni maggiormente frequentate.</h3>
+                </div> 
+                <div class="text-center"><h4>Le migliori 15 stazioni</h4></div>
+                <div class="row">
+                    <div class="col-6"><img width="100%" src="assets/img/about/arrtop15.jpg"></div>
+                    <div class="col-6"><img width="100%" src="assets/img/about/top15.jpg"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-6 ">Le visualizzazioni permettono di identificare le stazioni, rispettivamente di arrivo e di partenza, più popolari, cioè quelle che dal 2011 al 2018 hanno registrato il più alto numero di arrivi e partenze dei viaggi in bicicletta.
+                         Le due visualizzazioni mostrano che le stazioni più frequentate sono quelle di Massachusetts Ave & Dupont Circle NW e Columbus Circle/ Union Station.</div>
+                    <div class="col-6 ">In particolare, la seconda è la stazione in cui parte e termina il maggior numero di viaggi di biciclette. Entrambe le stazioni sono collocate nel centro della città di Washington, dove è quindi possibile affermare che il servizio di bike sharing ha maggior successo, insieme alle zone di Alexandria, Reston, Bethesda, Tysons Corner e Silver Spring. </div>
+                    
+                  </div>
+            </div>
+        </section>
+        <!-- End-->
+        <!-- Team-->
+        <section class="page-section" id="users">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Composizione dei viaggi</h2>
+                    <h3 class="section-subheading text-muted">Una descrizione dell'utilizzo della rete di bikesharing.</h3>
+                </div> 
+                <div class="text-center"><h4></h4></div>
+                <br>
+                <div class="row">
+                    <div class="col-4">Quest’ultima visualizzazione evidenzia la variazione in termini di durata tra le due tipologie di utenti.Il grafico mostra come gli utenti casuali, rispetto agli utenti registrati, effettuano ogni anno meno corse, ma complessivamente molto più lunghe. Inoltre, si nota che gli utenti registrati effettuano viaggi di durata “simile” tra loro, perché la varianza ha un valore molto basso, mentre tra gli utenti casuali c’è forte differenza tra la somma delle durate dei viaggi negli anni.Questi fenomeni confermano come gli utenti casuali utilizzano il servizio soprattutto a scopo turistico. I loro viaggi hanno durata più lunga perché hanno spesso la finalità turistica di spostarsi da un’attrazione all’altra della città.</div>
+                    <div class="col-8"><img width="100%" src="assets/img/about/utentifinale.jpg"></div>
+                  </div>
+        </section>
+ 
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://YOUR-SERVER/javascripts/api/tableau-2.min.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
